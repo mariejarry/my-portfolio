@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #637760;
+    --secondary-color: #f4f4f4;
+    --bg-color: #fff;
+    --text-color: #525752;
+    --header-text-color: #fff;
+    --hover-color: #b4ccae;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 1rem;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 60px;
+}
+
+nav a {
+    color: var(--bg-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.social-links img, .icon-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.mail-icon {
+    background-color: var(--secondary-color);
+    filter: invert(1);
+    padding: 1px;
+}
+
+.social-links img:hover {
+    transform: translateY(-5px);
+}
+
+#projects {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.project-card {
+    border: 1px solid var(--hover-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.project-card:hover {
+    background-color: var(--hover-color);
+}
+
+.project-card a{
+    color: var(--text-color);
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.project-card img {
+    object-fit: contain;
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #hero {
+        padding: 30px 10px;
+    }
+}
